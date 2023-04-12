@@ -1,5 +1,6 @@
-import Logo from "@/assets/logo-cup-of-coffe.png"
+import Logo from "@/assets/logocafe.png"
 import { ShoppingCartIcon } from "@heroicons/react/24/outline"
+import { MapPinIcon } from "@heroicons/react/24/outline"
 import {Link} from 'react-router-dom';
 
 type Props = {}
@@ -8,15 +9,17 @@ const Navbar = (props: Props) => {
   const flexBetween = "flex items-center justify-between";
 
   return (
-    <div className={`${flexBetween} fixed top-0 z-30 w-full py-6 px-6`}>
+    <div className={`sticky ${flexBetween} top-0 z-30 w-full py-6 px-6 `}>
         <Link to="/">
           <div className="flex">
-            <img src={Logo} className="w-20" />
-            <h3 className="font-['Alkatra'] text-[22px] text-gray-500 relative top-16 right-2 h-10">Sip 22</h3>
+            <img src={Logo} width="130"/>
           </div>
         </Link>
       <div className={`${flexBetween} gap-8`}>
-        <div className="text-lg bg-[#EBE5F9] rounded-xl h-[2.3rem] w-min text-[1.5rem] p-[0.5rem]"> Kalisz, PL</div>
+        <div className="flex flex-row gap-2 text-lg bg-[#EBE5F9] rounded-xl h-min w-30 text-[1.55rem] p-[0.7rem]">
+          <MapPinIcon className="w-10 h-10"/>
+          <p className="m-auto">Kalisz, PL</p>
+          </div>
         <div>
           <Link to="/cashout">
             <ShoppingCartIcon className="h-14 w-14"/>
