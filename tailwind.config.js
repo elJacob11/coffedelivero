@@ -21,6 +21,13 @@ export default {
         xs: "480px",
         sm: "768px",
         md: "1060px",
+      },
+      boxShadow: {
+        '3xl': '0px 0px 50px 60px rgb(247,247,247)'
+      },
+      fontFamily: {
+        'baloo': ['Baloo\\ 2', 'sans-serif'],
+        'montserrat': ['Montserrat', 'sans-serif']
       }
     },
   },
