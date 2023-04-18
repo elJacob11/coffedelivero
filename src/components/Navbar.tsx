@@ -9,7 +9,7 @@ const Navbar = (props: Props) => {
   const flexBetween = "flex items-center justify-between";
 
   return (
-    <div className={`sticky ${flexBetween} top-0 z-30 w-full py-6 px-6 `}>
+    <div className={`sticky ${flexBetween} top-0 z-30 w-full py-6 px-6 bg-[#F7F7F7]`}>
         <Link to="/">
           <div className="flex">
             <img src={Logo} width="130"/>
