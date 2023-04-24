@@ -52,7 +52,7 @@ export const coffees = [
     name: 'Cappuccino',
     tags: ['traditional', 'with milk'],
     description: 'A shot of espresso with more foam than steamed milk',
-    photo: 'cappucino.png',
+    photo: 'capuccino.png',
     price: 9.9,
   },
   {
@@ -100,7 +100,7 @@ export const coffees = [
     name: 'Arabic',
     tags: ['special'],
     description: 'Drink prepared with Arabic beans and spices',
-    photo: 'arabe.png',
+    photo: 'arabecoffee.png',
     price: 9.9,
   },
   {
@@ -108,7 +108,7 @@ export const coffees = [
     name: 'Irish',
     tags: ['special', 'alcoholic'],
     description: 'Black coffee, whiskey, sugar and topped with whipped cream',
-    photo: 'irlandes.png',
+    photo: 'irlandescoffee.png',
     price: 9.9,
   },
 ]
