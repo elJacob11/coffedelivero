@@ -30,8 +30,10 @@ export default function CoffeeCard({coffee}: CoffeeProps) {
       </div>
       <h3 className='font-baloo text-[1.3rem] font-bold text-[#403937] pb-1'>{coffee.name}</h3>
       <p className='text-[#8D8686] font-normal text-[0.95rem]'>{coffee.description}</p>
-      <div>
-          {coffee.price}
+      <div className='pt-2'>
+        <div className='font-baloo text-[1.5rem] font-extrabold'>
+          ${coffee.price}
+        </div>
       </div>
     </div>
   )

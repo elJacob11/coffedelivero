@@ -12,7 +12,7 @@ const Info = (props: Props) => {
   const designIcon = "flex justify-center items-center rounded-[50%] h-10 w-10"
   const divDesign = "flex items-center gap-5 m-4 font-normal"
   return (
-    <div className='relative'>
+    <div className=' mt-8'>
       <img src={BackgroundImage} className=' flex shadow-3xl m-auto' />
       <div className='font-montserrat justify-center'>
         <h1 className='font-baloo text-[3rem] m-4 mt-0'>Find the perfect coffee for any time of the day</h1>
