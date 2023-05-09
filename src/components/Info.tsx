@@ -12,9 +12,9 @@ const Info = (props: Props) => {
   const designIcon = "flex justify-center items-center rounded-[50%] h-10 w-10"
   const divDesign = "flex items-center gap-5 m-4 font-normal"
   return (
-    <div className=' mt-8'>
+    <div className=' mt-8 xl:flex xl:mx-auto xl:justify-between xl:gap-x-20 xl:max-w-screen-2xl '>
       <img src={BackgroundImage} className=' flex shadow-3xl m-auto' />
-      <div className='font-montserrat justify-center'>
+      <div className='font-montserrat justify-center xl:max-w-3xl'>
         <h1 className='font-baloo text-[3rem] m-4 mt-0'>Find the perfect coffee for any time of the day</h1>
         <h3 className=' text-xl m-4 font-normal'>With our service Coffee Delivery you get your coffee wherever you are, anytime</h3>
         <div className=' text-lg'>

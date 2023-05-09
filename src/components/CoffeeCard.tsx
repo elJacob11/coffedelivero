@@ -1,4 +1,6 @@
-import React from 'react'
+import React, { useState } from 'react'
+import { ShoppingCartIcon } from "@heroicons/react/24/outline"
+
 
 type Props = {
   coffee: {}
@@ -19,9 +21,23 @@ interface CoffeeProps {
 
 export default function CoffeeCard({coffee}: CoffeeProps) {
   const coffeeDesign = " flex flex-col w-[90%] bg-[#F3F2F2] mt-[3rem] p-2 mb-8 "
+
+  const [quantity, setQuantity] = useState(1)
+
+  function handleIncrease() {
+    setQuantity(quantity+1)
+  }
+
+  function handleDecrease() {
+    setQuantity(quantity-1)
+  }
+
+  function handleAddToCart() {
+    
+  }
   
   return (
-    <div className={`${coffeeDesign} text-center items-center rounded-tr-sm rounded-bl-sm rounded-br-3xl rounded-tl-3xl`}>
+    <div className={`${coffeeDesign} text-center items-center rounded-tr-sm rounded-bl-sm rounded-br-3xl rounded-tl-3xl lg:max-w-[360px]`}>
       <img src={`/coffees/${coffee.photo}`} alt={`${coffee.photo}`} className=' -mt-16' />
       <div className='mt-3 mb-2'>
         {coffee.tags.map(tag => (
@@ -30,9 +46,21 @@ export default function CoffeeCard({coffee}: CoffeeProps) {
       </div>
       <h3 className='font-baloo text-[1.3rem] font-bold text-[#403937] pb-1'>{coffee.name}</h3>
       <p className='text-[#8D8686] font-normal text-[0.95rem]'>{coffee.description}</p>
-      <div className='pt-2'>
-        <div className='font-baloo text-[1.5rem] font-extrabold'>
-          ${coffee.price}
+      <div className='pt-2 w-full'>
+        <div className='flex items-center justify-between font-baloo text-[1.5rem] font-extrabold'>
+          <div className='pl-5 text-gray-700'>
+            ${coffee.price}
+          </div>
+          <div className='pr-4 flex items-center justify-center gap-4'>
+            <div className='flex items-center justify-between gap-1.5 bg-[#E6E5E5] rounded-lg pl-1 pr-1'>
+              <button onClick={handleDecrease} className=' border-r-2 border-gray-600 leading-5 pr-1.5'>-</button>
+              {quantity}
+              <button onClick={handleIncrease} className=' border-l-2 border-gray-600 leading-5 pl-1.5'>+</button>
+            </div>
+            <div onClick={handleAddToCart} className=' bg-[#E8D8C2] rounded-full w-9 h-9 flex justify-center items-center'>
+              <ShoppingCartIcon className='w-6 h-6' />
+            </div>
+          </div>
         </div>
       </div>
     </div>
