@@ -24,20 +24,22 @@ export default function CoffeeCard({coffee}: CoffeeProps) {
 
   const [quantity, setQuantity] = useState(1)
 
+  const [coffeeTab, setCoffeeTab] = useState([])
+
   function handleIncrease() {
     setQuantity(quantity+1)
   }
 
   function handleDecrease() {
-    setQuantity(quantity-1)
+    if(quantity>1) setQuantity(quantity-1)
   }
 
-  function handleAddToCart() {
-    
+  const handleAddToCart = (e:any) => {
+
   }
   
   return (
-    <div className={`${coffeeDesign} text-center items-center rounded-tr-sm rounded-bl-sm rounded-br-3xl rounded-tl-3xl lg:max-w-[360px]`}>
+    <div className={`${coffeeDesign} text-center items-center rounded-tr-sm rounded-bl-sm rounded-br-3xl rounded-tl-3xl lg:max-w-[400px] lg:min-h-[250px]`}>
       <img src={`/coffees/${coffee.photo}`} alt={`${coffee.photo}`} className=' -mt-16' />
       <div className='mt-3 mb-2'>
         {coffee.tags.map(tag => (
@@ -45,7 +47,7 @@ export default function CoffeeCard({coffee}: CoffeeProps) {
         ))}
       </div>
       <h3 className='font-baloo text-[1.3rem] font-bold text-[#403937] pb-1'>{coffee.name}</h3>
-      <p className='text-[#8D8686] font-normal text-[0.95rem]'>{coffee.description}</p>
+      <p className='text-[#8D8686] font-normal text-[0.95rem] lg:min-h-[45.6px]'>{coffee.description}</p>
       <div className='pt-2 w-full'>
         <div className='flex items-center justify-between font-baloo text-[1.5rem] font-extrabold'>
           <div className='pl-5 text-gray-700'>
@@ -57,9 +59,9 @@ export default function CoffeeCard({coffee}: CoffeeProps) {
               {quantity}
               <button onClick={handleIncrease} className=' border-l-2 border-gray-600 leading-5 pl-1.5'>+</button>
             </div>
-            <div onClick={handleAddToCart} className=' bg-[#E8D8C2] rounded-full w-9 h-9 flex justify-center items-center'>
+            <button onClick={handleAddToCart} className=' bg-[#E8D8C2] rounded-full w-9 h-9 flex justify-center items-center'>
               <ShoppingCartIcon className='w-6 h-6' />
-            </div>
+            </button>
           </div>
         </div>
       </div>

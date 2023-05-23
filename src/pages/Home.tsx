@@ -9,7 +9,7 @@ const Home = (props: Props) => {
   return (
     <div>
       <Info />
-      <Coffees coffees={coffees}/>
+      <Coffees />
     </div>
   )
 }

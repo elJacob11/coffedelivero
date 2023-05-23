@@ -1,10 +1,13 @@
 import React from 'react'
+import Cashout from '@/components/Cashout'
 
 type Props = {}
 
 const CompleteOrder = (props: Props) => {
   return (
-    <div>CompleteOrder</div>
+    <div>
+      <Cashout />
+    </div>
   )
 }
 
